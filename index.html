@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exodus Travel</title>
+    <style>
+     
+
+        .book-description {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .show-more-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .description {
+            display: none;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exodus Travel</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Activities</a></li>
+            </ul>
+           <!----<div class="icons">
+                <i class="fas fa-search" id="search-btn"></i>
+                <i class="fas fa-user" id="login-btn"></i>
+            </div>-->
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        
+        <div class="video-container">
+            
+            <img src="Images/Tourism3.jpg" id="video-container">
+            <div class="content">
+                <h1>D</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="section__content">
+            <p class="has-text-align-center">At Exodus, we believe it’s important to start as you mean to go on, setting a positive precedent for the new year ahead. But we’re not talking about lofty New Year’s resolutions, uh-uh. We’re talking about kickstarting your new year, with a brand-new adventure to look forward to. So, from now until <strong>10th January 2024 </strong>we’re excited to offer up to £300 off selected departures!</p>
+            
+            
+            <ex-read-more class="read-more typography-spacing" more-label="Read More" less-label="Read Less">
+                <div class="read-more__content" id="description">
+                    <p class="has-text-align-center">During our 2024 Trailblazer Event, you can enjoy discounts off some of our most popular trips...</p>
+                    <p class="has-text-align-center">But hurry, this offer isn’t around for long, so if you see a trip you like, don’t wait to secure your booking, to make 2024 a trailblazing year to remember!</p>
+                </div>
+                <div class="read-more__link" onclick="toggleDescription()">Read More</div>
+            </ex-read-more>
+            
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleDescription() {
+            var descriptionSection = document.getElementById("description");
+            var readMoreLink = document.querySelector(".read-more__link");
+
+            if (descriptionSection.style.display === "none" || descriptionSection.style.display === "") {
+                descriptionSection.style.display = "block";
+                readMoreLink.textContent = "Read Less";
+            } else {
+                descriptionSection.style.display = "none";
+                readMoreLink.textContent = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>
