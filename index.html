@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Exodus Travel</title>
+    <title>Exodus Tours</title>
     <style>
-     
-
-        .book-description {
+        book-description {
             text-align: center;
             padding: 1rem;
         }
@@ -26,8 +23,48 @@
             text-align: center;
             padding: 1rem;
         }
+        
+       
+
+       
+
+       
+
+        
+        
+
+        main {
+            padding: 3em;
+            margin-top: 2em; 
+        }
+
+        .highlight {
+            color: #4CAF50;
+            cursor: pointer;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+
+        
     </style>
+    <script>
+        function showMore() {
+            var moreText = document.getElementById("moreText");
+            var showMoreButton = document.getElementById("showMoreButton");
+
+            if (moreText.classList.contains("hidden-content")) {
+                moreText.classList.remove("hidden-content");
+                showMoreButton.innerHTML = "Show Less";
+            } else {
+                moreText.classList.add("hidden-content");
+                showMoreButton.innerHTML = "Show More";
+            }
+        }
+    </script>
 </head>
+<br/>
 <body>
     <header>
         <h1>Exodus Travel</h1>
@@ -38,54 +75,39 @@
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Activities</a></li>
             </ul>
-           <!----<div class="icons">
-                <i class="fas fa-search" id="search-btn"></i>
-                <i class="fas fa-user" id="login-btn"></i>
-            </div>-->
+            <div class="icons">
+                <!-- Uncomment the following lines if you want to include search and login icons -->
+                <!--<i class="fas fa-search" id="search-btn"></i>-->
+                <!--<i class="fas fa-user" id="login-btn"></i>-->
+            </div>
         </nav>
     </header>
-
+    
     <section class="home" id="home">
         
         <div class="video-container">
             
             <img src="Images/Tourism3.jpg" id="video-container">
             <div class="content">
-                <h1>D</h1>
+                
             </div>
         </div>
     </section>
 
-    <section id="main">
-        <div class="section__content">
-            <p class="has-text-align-center">At Exodus, we believe it’s important to start as you mean to go on, setting a positive precedent for the new year ahead. But we’re not talking about lofty New Year’s resolutions, uh-uh. We’re talking about kickstarting your new year, with a brand-new adventure to look forward to. So, from now until <strong>10th January 2024 </strong>we’re excited to offer up to £300 off selected departures!</p>
-            
-            
-            <ex-read-more class="read-more typography-spacing" more-label="Read More" less-label="Read Less">
-                <div class="read-more__content" id="description">
-                    <p class="has-text-align-center">During our 2024 Trailblazer Event, you can enjoy discounts off some of our most popular trips...</p>
-                    <p class="has-text-align-center">But hurry, this offer isn’t around for long, so if you see a trip you like, don’t wait to secure your booking, to make 2024 a trailblazing year to remember!</p>
-                </div>
-                <div class="read-more__link" onclick="toggleDescription()">Read More</div>
-            </ex-read-more>
-            
-        </div>
-    </section>
+    
 
-    <script src="script.js"></script>
-    <script>
-        function toggleDescription() {
-            var descriptionSection = document.getElementById("description");
-            var readMoreLink = document.querySelector(".read-more__link");
+    <main>
+        
+        <h2><b>Exodus Tours</b></h2>
+        <p>At Exodus, we believe it’s important to start as you mean to go on, setting a positive precedent for the new year ahead. But we’re not talking about lofty New Year’s resolutions, uh-uh. We’re talking about kickstarting your new year, with a brand-new adventure to look forward to.</p>
+        
+        <p id="moreText" class="hidden-content">
+            There are many pagan sites to visit as well as UNESCO World Heritage-listed churches, which are - almost without exception - built in stunning locations. Surrounded by forests, perched on the top of dramatic gorges or silhouetted before snow-capped mountains, they draw us to magnificent open spaces filled with a huge variety of trees and wild flowers.
+        </p>
+        
+      <center>  <p class="highlight" onclick="showMore()" id="showMoreButton">Show More</p></center>
+    </main>
 
-            if (descriptionSection.style.display === "none" || descriptionSection.style.display === "") {
-                descriptionSection.style.display = "block";
-                readMoreLink.textContent = "Read Less";
-            } else {
-                descriptionSection.style.display = "none";
-                readMoreLink.textContent = "Read More";
-            }
-        }
-    </script>
+    
 </body>
 </html>
